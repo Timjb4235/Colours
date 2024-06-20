@@ -5,12 +5,14 @@ class Colour:
         self.green = g
         self.blue = b
         self.alpha = alpha
+
+    # Getter functions not needed in Python
         
     def toHexString(self):
         ## Converts a set of three byte values to a six character hexadecimal string.
-        hex_red = hex(self.red)
-        hex_green = hex(self.green)
-        hex_blue = hex(self.blue)
+        hex_red = hex(int(self.red))
+        hex_green = hex(int(self.green))
+        hex_blue = hex(int(self.blue))
         return hex_red[2:].zfill(2) + hex_green[2:].zfill(2) + hex_blue[2:].zfill(2)
     
     def lerp(self, second_colour, float):
