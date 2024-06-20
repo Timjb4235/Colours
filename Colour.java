@@ -4,7 +4,6 @@ public class Colour {
     private int blue;
     private int green;
 
-
     public Color(int r, int g, int b) {
         // Initialises a colour instance, ensuring values are between 0 and 255
         red = Math.max(Math.min(r, 255), 0);
@@ -48,17 +47,4 @@ public class Colour {
         int blueChange = other.getBlue() - blue;
         return new Colour((int) Math.round(red + d * redChange), (int) Math.round(green + d * greenChange), (int) Math.round(blue + d * blueChange));
     }
-
-    /*
-    public static void main(String[] args) {
-        Color red = new Color(255, 0, 0);
-        System.out.println(red.toHexString());
-        Color blue = new Color(0, 0, 255);
-        System.out.println(blue.toHexString());
-        Color purple = red.lerp(blue, 0.5f);
-        System.out.println(purple.toHexString());
-        Color purple2 = red.lerp(blue, 0.5);
-        System.out.println(purple2.toHexString());
-    }
-    */
 }
