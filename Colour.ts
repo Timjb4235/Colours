@@ -12,11 +12,11 @@ class Colour {
         this.alpha = alpha;
     }
 
-    toHexString(): string{
+    toHexString(): string {
         // Converts a set of three byte values to a six character hexadecimal string.
-        const hexRed =  this.red.toString(16);
-        const hexGreen =  this.green.toString(16);
-        const hexBlue =  this.blue.toString(16);
+        const hexRed: string =  this.red.toString(16);
+        const hexGreen: string =  this.green.toString(16);
+        const hexBlue: string =  this.blue.toString(16);
         return hexRed.padStart(2,"0") + hexGreen.padStart(2,"0") + hexBlue.padStart(2,"0");
     }
 
